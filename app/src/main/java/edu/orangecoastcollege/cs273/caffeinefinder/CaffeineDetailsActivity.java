@@ -33,6 +33,8 @@ public class CaffeineDetailsActivity extends AppCompatActivity implements OnMapR
         phoneTextView = (TextView) findViewById(R.id.phoneTextView);
         positionTextView = (TextView) findViewById(R.id.positionTextView);
 
+        selectedLocation = getIntent().getParcelableExtra("SelectedLocation");
+
         nameTextView.setText(selectedLocation.getName());
         addressTextView.setText(selectedLocation.getAddress());
         phoneTextView.setText(selectedLocation.getPhone());
